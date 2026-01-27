@@ -1,9 +1,19 @@
 import { SkillScores } from '@/types/chart';
-import { skills } from './skills';
 
-export const defaultScores: SkillScores = Object.fromEntries(
-  skills.map((s) => [s.id, 50])
-);
+export const defaultScores: SkillScores = {
+  'user-research': 50,
+  'visual-design': 85,
+  'interaction-design': 80,
+  'information-architecture': 65,
+  'ai-tool-mastery': 85,
+  'code-literacy': 70,
+  'data-analysis': 50,
+  'rapid-prototyping': 90,
+  'business-strategy': 75,
+  'cross-functional-leadership': 80,
+  'speed-execution': 85,
+  'communication': 65,
+};
 
 export const profileColors = [
   '#6366f1', // indigo

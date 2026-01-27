@@ -1,4 +1,4 @@
-export const CHART_MARGIN = 60;
+export const CHART_MARGIN = 80;
 export const GRID_LEVELS = 5;
 export const MAX_SCORE = 100;
 export const MIN_SCORE = 0;

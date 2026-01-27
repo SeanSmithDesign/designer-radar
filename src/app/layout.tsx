@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Designer Radar - Skills Assessment',
+  title: "Sean's Designer Strength Radar",
   description:
     'Interactive radar chart for product designers and UX designers at startups leveraging AI tools and coding.',
 };
