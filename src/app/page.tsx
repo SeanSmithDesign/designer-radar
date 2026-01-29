@@ -18,7 +18,7 @@ import { Profile } from '@/types/chart';
 import { presets } from '@/data/presets';
 import { profileColors } from '@/data/defaults';
 
-const GITHUB_URL = 'https://github.com/seansmith/designer-radar'; // TODO: Update with actual URL
+const GITHUB_URL = 'https://github.com/SeanSmithDesign/designer-radar';
 const IS_PORTFOLIO_MODE = process.env.NEXT_PUBLIC_PORTFOLIO_MODE === 'true';
 
 function RadarApp() {
