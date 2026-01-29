@@ -37,10 +37,10 @@ export function Header() {
         </div>
         <div>
           <h1 className="text-sm font-semibold tracking-tight">
-            Sean&apos;s Designer Strength Radar
+            Product Designer Strength Radar
           </h1>
           <p className="text-[10px] text-muted font-medium">
-            Product Design Leader
+            Map your design skills
           </p>
         </div>
       </div>

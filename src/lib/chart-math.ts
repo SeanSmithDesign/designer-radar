@@ -56,6 +56,34 @@ export function generateGridPath(
   );
 }
 
+/**
+ * Convert Cartesian coordinates to polar (relative to center)
+ */
+export function cartesianToPolar(
+  point: { x: number; y: number },
+  center: { x: number; y: number }
+): { angle: number; radius: number } {
+  const dx = point.x - center.x;
+  const dy = point.y - center.y;
+  return {
+    angle: Math.atan2(dy, dx),
+    radius: Math.sqrt(dx * dx + dy * dy),
+  };
+}
+
+/**
+ * Project a point onto an axis and return the clamped radius.
+ * Used for drag-to-axis snapping.
+ */
+export function projectPointToAxis(
+  point: { x: number; y: number },
+  center: { x: number; y: number },
+  maxRadius: number
+): number {
+  const polar = cartesianToPolar(point, center);
+  return Math.max(0, Math.min(polar.radius, maxRadius));
+}
+
 export function getLabelAnchor(
   angle: number
 ): { textAnchor: 'start' | 'middle' | 'end'; dy: string } {

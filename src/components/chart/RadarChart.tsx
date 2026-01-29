@@ -15,6 +15,8 @@ interface RadarChartProps {
   activeProfileId: string;
   width: number;
   height: number;
+  isEditMode?: boolean;
+  onScoreChange?: (skillId: string, value: number) => void;
 }
 
 export function RadarChart({
@@ -22,6 +24,8 @@ export function RadarChart({
   activeProfileId,
   width,
   height,
+  isEditMode = false,
+  onScoreChange,
 }: RadarChartProps) {
   const numPoints = skills.length;
   const size = Math.min(width, height);
@@ -96,6 +100,9 @@ export function RadarChart({
             center={center}
             scale={scale}
             color={activeProfile.color}
+            isEditMode={isEditMode}
+            maxRadius={radius}
+            onScoreChange={onScoreChange}
           />
         </>
       )}
