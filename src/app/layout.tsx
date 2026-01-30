@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import Script from 'next/script';
 import { Providers } from './providers';
 import './globals.css';
+
+const IS_PORTFOLIO_MODE = process.env.NEXT_PUBLIC_PORTFOLIO_MODE === 'true';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,10 +29,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      {IS_PORTFOLIO_MODE && (
+        <head>
+          <link rel="stylesheet" href="/styles/navbar.css" />
+        </head>
+      )}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {IS_PORTFOLIO_MODE && <div id="shared-navbar"></div>}
         <Providers>{children}</Providers>
+        {IS_PORTFOLIO_MODE && (
+          <Script src="/components/shared-navbar.js" strategy="afterInteractive" />
+        )}
       </body>
     </html>
   );
