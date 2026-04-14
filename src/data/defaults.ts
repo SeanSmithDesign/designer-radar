@@ -1,17 +1,17 @@
 import { SkillScores } from '@/types/chart';
 
 export const defaultScores: SkillScores = {
-  'user-research': 50,
+  'user-research': 60,
   'visual-design': 85,
   'interaction-design': 80,
   'information-architecture': 65,
   'ai-tool-mastery': 85,
-  'code-literacy': 70,
-  'data-analysis': 50,
+  'code-literacy': 80,
+  'data-analysis': 60,
   'rapid-prototyping': 90,
   'business-strategy': 75,
   'cross-functional-leadership': 80,
-  'speed-execution': 85,
+  'speed-execution': 80,
   'communication': 65,
 };
 
